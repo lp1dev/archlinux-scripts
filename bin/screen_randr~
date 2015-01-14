@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+if [ $# != "1" ]
+then
+   echo "usage :" $0 "[single|dual|extended]"
+   exit
+fi
+
+if [ $1 == "single" ]
+then
+    sh /home/lupin/screen/single.sh
+elif [ $1 == "dual" ]
+     sh /home/lupin/screen/single.sh
+     sh /home/lupin/screen/dual.sh
+then
+elif [ $1 == "extended" ]
+then
+    sh /home/lupin/screen/single.sh
+    sh /home/lupin/screen/extended.sh
+else
+    echo "unknown parameter :" $1
+fi

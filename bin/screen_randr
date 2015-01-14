@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+directory="/home/lupin/archlinux-scripts/screen"
+
+if [ $# != "1" ]
+then
+   echo "usage :" $0 "[single|dual|extended]"
+   exit
+fi
+
+if [ $1 == "single" ]
+then
+    sh $directory/single.sh
+elif [ $1 == "dual" ]
+then     
+     sh $directory/single.sh
+     sh $directory/dual.sh
+
+elif [ $1 == "extended" ]
+then
+    sh $directory/single.sh
+    sh $directory/extended.sh
+else
+    echo "unknown parameter :" $1
+fi
