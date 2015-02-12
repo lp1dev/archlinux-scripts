@@ -1,1 +1,1 @@
-source archlinux-scripts/bashrc
+source /home/lupin/archlinux-scripts/bashrc

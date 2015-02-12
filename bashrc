@@ -1,7 +1,6 @@
 ###USERDATA (AKA X0STUFF):
 ##Based on : https://gist.github.com/xtrm0/9749886 Thanks xtrm0 :)
  
- 
 ###COLORS###
  
 BLACK='\e[0;30m'
@@ -30,7 +29,7 @@ alias emacs="emacs -nw"
 alias ls="ls --color=auto"
 
 export HISTFILESIZE=20000
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/lupin/archlinux-scripts/bin"
+export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/lupin/archlinux-scripts/bin"
 export HISTSIZE=10000
 shopt -s histappend
 shopt -s cmdhist
