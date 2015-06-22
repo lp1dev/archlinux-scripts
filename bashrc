@@ -70,3 +70,9 @@ PS1=$PS1"\]@\[${NC}\]\h:\[\e[0;36m\]\w\[\e[0m\]\$ "
 }
  
 PROMPT_COMMAND=exitstatus
+
+sshfunc(){
+	ssh exploit@$1
+}
+
+alias s=sshfunc
