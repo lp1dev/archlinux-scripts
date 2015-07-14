@@ -1,6 +1,6 @@
 ###USERDATA (AKA X0STUFF):
 ##Based on : https://gist.github.com/xtrm0/9749886 Thanks xtrm0 :)
- 
+
 ###COLORS###
  
 BLACK='\e[0;30m'
