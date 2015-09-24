@@ -36,7 +36,7 @@ shopt -s cmdhist
 HISTCONTROL=ignoreboth
 export HISTIGNORE="&:ls:[bf]g:exit"
 
-alias eip="ssh lupin@163.5.85.107"
+alias eip="ssh exploit@163.5.84.143"
 alias lp1="ssh lupin@lp1.eu"
 alias ..="cd .."
 alias ...="cd ../.."
