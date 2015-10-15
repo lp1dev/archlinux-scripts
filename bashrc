@@ -78,3 +78,4 @@ sshfunc(){
 }
 
 alias s=sshfunc
+eval $(thefuck --alias)
