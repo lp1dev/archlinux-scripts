@@ -48,10 +48,10 @@ alias la="ls -la"
 alias qemu="qemu-launcher"
  
 ###WELCOME SCREEN###
-echo -ne "Hello, ${LIGHTBLUE}$USER${NC}. today is, "; date
-echo -ne "${BLUE}Sysinfo:";uptime ;
+#echo -ne "Hello, ${LIGHTBLUE}$USER${NC}. today is, "; date
+#echo -ne "${BLUE}Sysinfo:";uptime ;
 #echo -ne "${NC}"; cal ;
-echo -ne "${NC}";
+#echo -ne "${NC}";
  
  
 function exitstatus {
