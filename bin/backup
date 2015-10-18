@@ -1,0 +1,6 @@
+#!/bin/sh
+
+login="lupin"
+server1="lp1.eu"
+
+rsync -avz $1 $login@$server1:~/shared/backups/$1
