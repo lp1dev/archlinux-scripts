@@ -38,6 +38,7 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 
 alias eip="ssh exploit@163.5.84.143"
 alias lp1="ssh lupin@lp1.eu"
+alias lp2="ssh lupin@lp2"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -79,3 +80,8 @@ sshfunc(){
 
 alias s=sshfunc
 eval $(thefuck --alias)
+
+alias idea.sh="LD_PRELOAD=/lib/libglib-2.0.so idea.sh" ## Momentary patch for idea.sh crash with glib2 2.46
+alias weblog="emacs scp://lupin@weblog.sh/file.md"
+alias xflux="xflux -l 53.349805 -g -6.26031"
+export GOPATH="/home/lupin/.gopath/"
