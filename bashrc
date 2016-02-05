@@ -38,7 +38,7 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 
 alias eip="ssh exploit@163.5.84.143"
 alias lp1="ssh lupin@lp1.eu"
-alias lp2="ssh lupin@lp2"
+alias lp2="ssh lupin@2.lp1.eu"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
