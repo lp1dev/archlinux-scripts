@@ -69,7 +69,7 @@ PS1=$PS1"${NC}"
 else
 PS1=$PS1"${CYAN}"e
 fi
-PS1=$PS1"\]@\[${NC}\]\h:\[\e[0;36m\]\w\[\e[0m\]\$ "
+PS1=$PS1"\]@\[${NC}\]\h\[\e[0;36m\]\[\e[0m\]\ \w\n--$>"
 }
  
 PROMPT_COMMAND=exitstatus
@@ -78,10 +78,18 @@ sshfunc(){
 	ssh exploit@$1
 }
 
+monitor_function(){
+	sudo ifconfig $1 down
+	sudo iwconfig $1 mode monitor
+}
+
 alias s=sshfunc
 eval $(thefuck --alias)
 
 alias idea.sh="LD_PRELOAD=/lib/libglib-2.0.so idea.sh" ## Momentary patch for idea.sh crash with glib2 2.46
 alias weblog="emacs scp://lupin@weblog.sh/file.md"
 alias xflux="xflux -l 53.349805 -g -6.26031"
+alias redis='python < echo "r = redis.StrictRedis(host='2.lp1.eu', port=6379, db=0)"'
+alias rails='~/.gem/ruby/2.3.0/gems/railties-4.2.5.1/bin/rails'
 export GOPATH="/home/lupin/.gopath/"
+alias mon=monitor_function
