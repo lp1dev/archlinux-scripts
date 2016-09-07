@@ -1,0 +1,56 @@
+#!/usr/bin/python
+
+from subprocess import call
+from sys import argv, exit
+from os.path import isdir, isfile
+from os import makedirs
+
+trashdir = "~/.trash/"
+
+av_flags = {
+    "-f": False,
+    "-r": False,
+    "-v": False
+}
+
+def get_filenames():
+    filenames = []
+    for arg in argv:
+        if arg[0].strip() != '-':
+            filenames.append(arg)
+            if not isfile(arg):
+                exit("cannot remove '%s' : no such file or directory" %arg)
+    return filenames
+
+def get_flags():
+    flags = av_flags
+    for arg in argv:
+        for flag in av_flags.keys():
+            if flag in argv:
+                flags[flag] = True
+    return flags
+
+def usage():
+    print("%s [file1 file2...] %s" %(argv[0], list(av_flags.keys())))
+    return 0
+
+def check_trashdir():
+    if not isdir(trashdir):
+        makedirs(trashdir)
+
+def rm(flags, filenames):
+    for filename in filenames:
+        call(["mv", filename, trashdir])
+    
+        
+def main():
+    if len(argv) < 2:
+        return usage()
+    check_trashdir()
+    flags = get_flags()
+    filenames = get_filenames()
+    rm(flags, filenames)
+    return 0
+
+if __name__ == "__main__":
+   main()
