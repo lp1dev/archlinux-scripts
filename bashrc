@@ -88,3 +88,4 @@ alias redis='python < echo "r = redis.StrictRedis(host='2.lp1.eu', port=6379, db
 alias rails='~/.gem/ruby/2.3.0/gems/railties-4.2.5.1/bin/rails'
 export GOPATH="/home/$USER/.gopath/"
 alias mon=monitor_function
+alias phttp='screen -dmS http python -m http.server'
