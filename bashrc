@@ -47,32 +47,9 @@ alias sl="ls"
 alias ll="ls -l"
 alias la="ls -la"
 alias qemu="qemu-launcher"
- 
-###WELCOME SCREEN###
-#echo -ne "Hello, ${LIGHTBLUE}$USER${NC}. today is, "; date
-#echo -ne "${BLUE}Sysinfo:";uptime ;
-#echo -ne "${NC}"; cal ;
-#echo -ne "${NC}";
- 
- 
-function exitstatus {
-EXITSTATUS="$?"
-PS1="\[\e[0;36m\][\t] \[\e[1;33m\]\u\["
-if (( "$EXITSTATUS" == "130" )); then
-PS1=$PS1"${MAGENTA}"
-elif (("$EXITSTATUS" == "1")) || (( ("$EXITSTATUS" >= "128") && ("$EXITSTATUS" <= "255") )); then
-PS1=$PS1"${RED}"
-elif (("$EXITSTATUS" == "2")) || (("$EXITSTATUS" == "126")) || (("$EXITSTATUS" == "127")); then
-PS1=$PS1"${BLUE}"
-elif (("$EXITSTATUS" == "0")); then
-PS1=$PS1"${NC}"
-else
-PS1=$PS1"${CYAN}"e
-fi
-PS1=$PS1"\]@\[${NC}\]\h\[\e[0;36m\]\[\e[0m\] \e[32;33m\w\n\e[0m-> "
-}
- 
-PROMPT_COMMAND=exitstatus
+
+export PS1="\[\033[38;5;247m\][\[$(tput sgr0)\]\[\033[38;5;246m\]\A\[$(tput sgr0)\]\[\033[38;5;247m\]]\[$(tput sgr0)\]\[\033[38;5;33m\]\u\[$(tput sgr0)\]\[\033[38;5;150m\]@\[$(tput sgr0)\]\[\033[38;5;39m\]\h\[$(tput sgr0)\]\[\033[38;5;243m\]{\[$(tput sgr0)\]\[\033[38;5;129m\]\W\[$(tput sgr0)\]\[\033[38;5;243m\]}\[$(tput sgr0)\]\[\033[38;5;15m\]\n\[$(tput sgr0)\]\[\033[38;5;64m\]-\[$(tput sgr0)\]\[\033[38;5;66m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+
 
 sshfunc(){
 	ssh exploit@$1
