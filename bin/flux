@@ -1,2 +1,2 @@
 #!/bin/sh
-screen -dmS flux redshift -t 3500:3500
+screen -dmS flux redshift -t 3000:3000
