@@ -9,8 +9,9 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+set $alt Mod1
 set $sup Mod4
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -31,7 +32,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+t exec terminator
+bindsym $mod+t exec lxterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -161,3 +162,5 @@ bar {
 exec --no-startup-id setxkbmap us intl
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
+exec --no-startup-id flux
+exec --no-startup-id lxterminal
