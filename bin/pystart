@@ -1,0 +1,5 @@
+#!/bin/sh
+
+PYTHON=`which python`
+echo -e "#!$PYTHON\n\ndef\tmain():\n  return 0\n\nif __name__ == '__main__':\n  main()" > main.py
+chmod +x main.py
