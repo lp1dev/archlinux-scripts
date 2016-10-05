@@ -118,3 +118,4 @@ export GOPATH="/home/$USER/.gopath/"
 export ANDROID_HOME="/home/$USER/.android-sdk/"
 alias mon=monitor_function
 alias phttp='screen -dmS http python -m http.server'
+alias pf="git push --force-with lease"
