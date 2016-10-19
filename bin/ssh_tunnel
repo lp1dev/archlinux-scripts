@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ $# == '1' ]
+then
+    screen -S autossh -M 10984 -N -f -R $1:localhost:22 lupin@2.lp1.eu
+
+else
+    echo "usage : " $0 " port"
+fi
