@@ -29,7 +29,7 @@ alias emacs="emacs -nw"
 alias ls="ls --color=auto"
 
 export HISTFILESIZE=20000
-export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin"
+export PATH="$PATH:/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin"
 export HISTSIZE=10000
 shopt -s histappend
 shopt -s cmdhist
@@ -49,7 +49,7 @@ alias ll="ls -l"
 alias la="ls -la"
 alias qemu="qemu-launcher"
 
-export PS1="\[\033[38;5;247m\][\[$(tput sgr0)\]\[\033[38;5;246m\]\A\[$(tput sgr0)\]\[\033[38;5;247m\]]\[$(tput sgr0)\]\[\033[38;5;33m\]\u\[$(tput sgr0)\]\[\033[38;5;150m\]@\[$(tput sgr0)\]\[\033[38;5;39m\]\h\[$(tput sgr0)\]\[\033[38;5;243m\]{\[$(tput sgr0)\]\[\033[38;5;129m\]\W\[$(tput sgr0)\]\[\033[38;5;243m\]}\[$(tput sgr0)\]\[\033[38;5;15m\]\n\[$(tput sgr0)\]\[\033[38;5;64m\]-\[$(tput sgr0)\]\[\033[38;5;66m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;247m\][\[$NC\]\[\033[38;5;246m\]\A\[$NC\]\[\033[38;5;247m\]]\[$NC\]\[\033[38;5;33m\]\u\[$NC\]\[\033[38;5;150m\]@\[$NC\]\[\033[38;5;39m\]\h\[$NC\]\[\033[38;5;243m\]{\[$NC\]\[\033[38;5;129m\]\W\[$NC\]\[\033[38;5;243m\]}\[$NC\]\[\033[38;5;15m\]\n\[$NC\]\[\033[38;5;64m\]-\[$NC\]\[\033[38;5;66m\]>\[$NC\]\[\033[38;5;15m\] \[$NC\]"
 
 
 sshfunc(){
