@@ -119,3 +119,6 @@ export ANDROID_HOME="/home/$USER/.android-sdk/"
 alias mon=monitor_function
 alias phttp='screen -dmS http python -m http.server'
 alias pf="git push --force-with lease"
+alias docker-rmall="docker rm $(docker ps -a -q)"
+alias docker-killall="docker stop $(docker ps -a -q)"
+
