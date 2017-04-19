@@ -1,4 +1,5 @@
 (add-to-list 'load-path (expand-file-name "~/archlinux-scripts/emacs"))
+(setq backup-directory-alist `(("." . "~/.saves")))
 (require 'go-mode-autoloads)
 (require 'auto-install)
 (require 'typescript)
