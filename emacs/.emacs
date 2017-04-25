@@ -1,16 +1,18 @@
 (add-to-list 'load-path (expand-file-name "~/archlinux-scripts/emacs"))
 (setq backup-directory-alist `(("." . "~/.saves")))
+
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+
 (require 'go-mode-autoloads)
 (require 'auto-install)
 (require 'angular-html-mode)
 (require 'ng2-mode)
 (require 'tss)
-(require 'typescript)
 (tss-config-default)
-
+(require 'typescript)
 (require 'auto-complete)
-(global-auto-complete-mode t)
- 
 (require 'auto-complete-config)
 (ac-ropemacs-initialize)
 (global-auto-complete-mode t)
