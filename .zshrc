@@ -119,6 +119,8 @@ export ANDROID_HOME="/home/$USER/.android-sdk/"
 alias mon=monitor_function
 alias phttp='screen -dmS http python -m http.server'
 alias pf="git push --force-with lease"
-alias docker-rmall="docker rm $(docker ps -a -q)"
-alias docker-killall="docker stop $(docker ps -a -q)"
-
+alias docker_rmall="docker rm $(docker ps -a -q)"
+alias docker_killall="docker stop $(docker ps -a -q)"
+eval $(thefuck --alias)
+alias commands="history|awk '{print $2}'|sort|uniq -c|sort -rn|head -30|awk '!max{max=$1;}{r="";i=s=100*$1/max;while(i-->0)r=r\"#\";printf \"%50s %5d %s %s\",$2,$1,r,\"\n\";}'"
+export PYTHONDONTWRITEBYTECODE=1
