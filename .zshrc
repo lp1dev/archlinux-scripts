@@ -54,6 +54,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/archlinux-scripts/aliases-exports
 
 # User configuration
 
@@ -83,44 +84,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
-alias emacs="emacs -nw"
-alias ls="ls --color=auto"
-
-export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin"
-alias eip="ssh exploit@163.5.84.143"
-alias lp1="ssh lupin@lp1.eu"
-alias lp2="ssh lupin@2.lp1.eu"
-alias lp3="ssh lupin@3.lp1.eu"
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias sl="ls"
-alias ll="ls -l"
-alias la="ls -la"
-alias qemu="qemu-launcher"
-
-sshfunc(){
-	ssh exploit@$1
-}
-
-monitor_function(){
-	sudo ifconfig $1 down
-	sudo iwconfig $1 mode monitor
-}
-
-alias xflux="xflux -l 53.349805 -g -6.26031"
-alias redis='echo -e "import redis\nr = redis.StrictRedis(host=\"2.lp1.eu\", port=6379, db=0)" | python'
-alias rails='~/.gem/ruby/2.3.0/gems/railties-4.2.5.1/bin/rails'
-export GOPATH="/home/$USER/.gopath/"
-export ANDROID_HOME="/home/$USER/.android-sdk/"
-alias mon=monitor_function
-alias phttp='screen -dmS http python -m http.server'
-alias pf="git push --force-with lease"
-alias docker_rmall="docker rm $(docker ps -a -q)"
-alias docker_killall="docker stop $(docker ps -a -q)"
-eval $(thefuck --alias)
-alias commands="history|awk '{print $2}'|sort|uniq -c|sort -rn|head -30|awk '!max{max=$1;}{r="";i=s=100*$1/max;while(i-->0)r=r\"#\";printf \"%50s %5d %s %s\",$2,$1,r,\"\n\";}'"
-export PYTHONDONTWRITEBYTECODE=1
