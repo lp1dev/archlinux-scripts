@@ -5,6 +5,7 @@
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
+(require 'rainbow-mode)
 (require 'go-mode-autoloads)
 (require 'auto-install)
 (require 'angular-html-mode)
@@ -27,3 +28,13 @@
       (append ac-modes
 	      '(eshell-mode
 		)))
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
