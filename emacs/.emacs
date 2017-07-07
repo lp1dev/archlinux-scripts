@@ -5,6 +5,7 @@
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
+(require 'kotlin-mode)
 (require 'rainbow-mode)
 (require 'go-mode-autoloads)
 (require 'auto-install)
