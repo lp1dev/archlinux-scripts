@@ -26,5 +26,5 @@ export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/b
 export GOPATH="/home/$USER/.gopath/"
 export ANDROID_HOME="/home/$USER/.android-sdk/"
 export PATH=$PATH:$ANDROID_HOME/build-tools/24.0.2
-
+export EDITOR=emacs
     
