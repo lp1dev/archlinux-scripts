@@ -21,6 +21,7 @@ alias lsd='gifcaca https://media.giphy.com/media/OhEWDytX1xcg8/200w_d.gif 2> /de
 alias deploy='function _deploy(){ curl -X PUT "http://vm-crashtest.bepatient.mobi:8000/$1" };_deploy'
 alias delbranch='function _del(){ curl -X DELETE "http://vm-crashtest.bepatient.mobi:8000/$1" };_del'
 alias listbranch="curl 'http://vm-crashtest.bepatient.mobi:8000/'"
+alias e="emacs"
     
 export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin"
 export GOPATH="/home/$USER/.gopath/"
