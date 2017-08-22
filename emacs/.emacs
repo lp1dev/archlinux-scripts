@@ -4,7 +4,7 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
-
+(require 'po-mode)
 (require 'kotlin-mode)
 (require 'rainbow-mode)
 (require 'go-mode-autoloads)
@@ -39,3 +39,4 @@
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.po\\'" . po-mode))
