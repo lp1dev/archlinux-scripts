@@ -1,0 +1,52 @@
+#!/usr/bin/python
+
+from    sys import stdin
+from    subprocess import run, PIPE
+from    os import chdir, environ
+from    os.path import isdir
+
+DEBUG = True
+builtins = ["cd", "exit"]
+
+def     stop_tts():
+    run(["killall", "espeak"])
+
+def     tts(sentence):
+    print("[debug]: reading %s" %sentence) if DEBUG else None
+    completedProcess = run(["espeak", sentence], stdout=PIPE)
+    
+def     builtin(line):
+    if line[0] == "cd":
+        if not isdir(line[1]):
+            return "%s is not a directory" %line[1]
+        chdir(line[1])
+        return line[1]
+    elif line[0] == "exit":
+        exit(0)
+    
+def     execute(line):
+    splitLine = line.split()
+    if len(splitLine):
+        if splitLine[0] in builtins:
+            return builtin(splitLine)
+        try:
+            completedProcess = run(splitLine, stdout=PIPE, stderr=PIPE)
+        except FileNotFoundError as e:
+            return "Command not found: %s" %line
+        return completedProcess.stdout if len(completedProcess.stdout) else completedProcess.stderr
+
+def     main():
+    stop = False
+    while not stop:
+        try:
+            for line in stdin:
+                output = execute(line)
+                print("[debug]: %s" %output) if DEBUG else None
+                if output is not None:
+                    tts(output)
+        except KeyboardInterrupt as e:
+            stop_tts()
+    return 0
+
+if __name__ == "__main__":
+    exit(main())
