@@ -6,17 +6,34 @@ from    os import chdir, environ
 from    os.path import isdir
 
 DEBUG = True
+audio_output_file = "/tmp/slightshell_output"
 builtins = ["cd", "exit"]
 
 def     stop_tts():
-    run(["killall", "espeak"])
+    run(["killall", "espeak", "&"], stderr=PIPE)
+    run(["killall", "festival", "&"], stderr=PIPE)
 
 def     tts(sentence):
+    stop_tts()
+    if type(sentence) is not str:
+        sentence = sentence.decode("UTF-8")
+    sentence = sentence.replace("\n", ",;. ")
     print("[debug]: reading %s" %sentence) if DEBUG else None
+    return festival(sentence)
+
+def     festival(sentence):
+    with open(audio_output_file, "w+") as f:
+        f.write(sentence)
+    run(["festival", "--tts", audio_output_file], stdout=PIPE, stderr=PIPE)
+    
+def     espeak(sentence):
     completedProcess = run(["espeak", sentence], stdout=PIPE)
     
 def     builtin(line):
     if line[0] == "cd":
+        if len(line) == 1:
+            chdir(environ["HOME"])
+            return environ["HOME"]
         if not isdir(line[1]):
             return "%s is not a directory" %line[1]
         chdir(line[1])
@@ -36,7 +53,7 @@ def     execute(line):
         return completedProcess.stdout if len(completedProcess.stdout) else completedProcess.stderr
 
 def     main():
-    stop = False
+    stop = False    
     while not stop:
         try:
             for line in stdin:
@@ -44,6 +61,7 @@ def     main():
                 print("[debug]: %s" %output) if DEBUG else None
                 if output is not None:
                     tts(output)
+                print("#> ", end="")
         except KeyboardInterrupt as e:
             stop_tts()
     return 0
