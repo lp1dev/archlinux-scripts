@@ -1,5 +1,5 @@
 alias lp1="ssh lupin@lp1.eu"
-alias lp2="ssh lupin@2.lp1.eu"
+alias lp2="ssh lp1@2.lp1.eu"
 alias lp3="ssh lupin@3.lp1.eu"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -14,8 +14,8 @@ alias redis='echo -e "import redis\nr = redis.StrictRedis(host=\"2.lp1.eu\", por
 alias rails='~/.gem/ruby/2.3.0/gems/railties-4.2.5.1/bin/rails'
 alias phttp='screen -dmS http python -m http.server'
 alias pf="git push --force-with lease"
-alias docker_rmall="docker rm $(docker ps -a -q)"
-alias docker_killall="docker stop $(docker ps -a -q)"
+#alias docker_rmall="docker rm $(docker ps -a -q)"
+#alias docker_killall="docker stop $(docker ps -a -q)"
 alias gifcaca='mplayer -vo aa -monitorpixelaspect 0.5 -msglevel all=0 -fs -aspect 16:9 –mf fps=30:type=gif  -ao dsound-sub-fuzziness 1 -loop 100'
 alias lsd='gifcaca https://media.giphy.com/media/OhEWDytX1xcg8/200w_d.gif 2> /dev/null' 
 alias deploy='function _deploy(){ curl -X PUT "http://vm-crashtest.bepatient.mobi:8000/$1" };_deploy'
