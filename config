@@ -28,6 +28,8 @@ font pango:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+for_window [class="^.*"] border pixel 1
+    
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -165,16 +167,20 @@ bar {
 
 font pango: Dejavu Sans Mono 14
 
-client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
+client.focused          #000000 #0f0f0f #f2f2f2 #595959
 client.focused_inactive #333333 #5F676A #ffffff #484e50
 client.unfocused        #333333 #424242 #888888 #292d2e 
-client.urgent           #C10004 #900000 #ffffff #900000
+client.urgent           #ffffff #b7b7b7 #000000 #a0a0a0
+
+gaps inner 10
+gaps outer 5
 
 #Custom commands
 
 exec --no-startup-id setxkbmap us intl
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
-exec --no-startup-id blueberry-tray
-exec --no-startup-id flux
+exec --no-startup-id blueberry-tray&
+exec --no-startup-id flux&
 exec --no-startup-id lxterminal
+exec --no-startup-id /home/lp1/archlinux-scripts/screen/custom_resolution.sh 2560 1080
