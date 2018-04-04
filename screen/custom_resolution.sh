@@ -16,6 +16,7 @@ if [ "$CONNECTED" = "connected" ]; then
     xrandr --newmode $MODENAME $MODEDATA
     xrandr --addmode $OUTPUT $MODENAME
     xrandr --output $OUTPUT --mode $MODENAME
+    xrandr --output eDP1 --off
 else
     echo "Monitor is not detected"
 fi
