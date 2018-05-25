@@ -20,7 +20,7 @@ function pull() {
 }
 
 function clone() {
-    xargs git clone < .toolsrc
+    xargs -L 1 git clone < .toolsrc
 }
 
 if [ "$#" -lt 1 ];
