@@ -24,10 +24,14 @@ alias listbranch="curl 'http://vm-crashtest.bepatient.mobi:8000/'"
 alias e="emacs"
 alias i3-reload="i3-msg reload && i3-msg restart"
 alias btc="curl http://rate.sx/btc"
+alias py="./env/bin/python"
     
 export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin"
 export GOPATH="/home/$USER/.gopath/"
 export ANDROID_HOME="/home/$USER/.android-sdk/"
 export PATH=$PATH:$ANDROID_HOME/build-tools/24.0.2
 export EDITOR=emacs
-    
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

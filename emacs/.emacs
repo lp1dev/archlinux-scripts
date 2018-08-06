@@ -13,6 +13,7 @@
 (autoload 'gfm-mode "markdown-mode"
    "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+(require 'vue-mode')
 (require 'kotlin-mode)
 (require 'rainbow-mode)
 (require 'go-mode-autoloads)
