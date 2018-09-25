@@ -1,6 +1,4 @@
-alias lp1="ssh lupin@lp1.eu"
-alias lp2="ssh lp1@2.lp1.eu"
-alias lp3="ssh lupin@3.lp1.eu"
+alias lp1="ssh lp1@lp1.eu -p 44"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -10,8 +8,6 @@ alias ll="ls -l"
 alias la="ls -la"
 alias qemu="qemu-launcher"
 alias xflux="xflux -l 53.349805 -g -6.26031"
-alias redis='echo -e "import redis\nr = redis.StrictRedis(host=\"2.lp1.eu\", port=6379, db=0)" | python'
-alias rails='~/.gem/ruby/2.3.0/gems/railties-4.2.5.1/bin/rails'
 alias phttp='screen -dmS http python -m http.server'
 alias pf="git push --force-with lease"
 #alias docker_rmall="docker rm $(docker ps -a -q)"
@@ -26,7 +22,7 @@ alias i3-reload="i3-msg reload && i3-msg restart"
 alias btc="curl http://rate.sx/btc"
 alias py="./env/bin/python"
     
-export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin"
+export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin:/home/lp1/.gopath/bin/"
 export GOPATH="/home/$USER/.gopath/"
 export ANDROID_HOME="/home/$USER/.android-sdk/"
 export PATH=$PATH:$ANDROID_HOME/build-tools/24.0.2
