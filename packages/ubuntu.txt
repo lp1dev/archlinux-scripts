@@ -1,1 +1,1 @@
-emacs25-nox lxterminal git zsh nmap netcat dnsutils screen neofetch python2.7 python python-virtualenv xclip
+emacs25-nox lxterminal git zsh nmap netcat dnsutils screen neofetch python2.7 python python-virtualenv xclip ruby docker.io docker-compose nodejs npm htop network-manager-openvpn network-manager-openvpn-gnome openvpn
