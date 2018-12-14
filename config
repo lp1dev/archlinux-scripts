@@ -162,7 +162,7 @@ bar {
     font pango: sans 12
 	colors{
            background #f2f2f288
-           statusline #515151
+           statusline #000000
     }
 }
 
