@@ -3,7 +3,7 @@
 # setup my massive monitor at 45hz if its plugged in
 
 RESOLUTION="2560 1080 60" 
-OUTPUT="HDMI1"
+OUTPUT="HDMI-1"
 
 CONNECTED=$(xrandr --current | grep -i $OUTPUT | cut -f2 -d' ')
 
@@ -16,7 +16,7 @@ if [ "$CONNECTED" = "connected" ]; then
     xrandr --newmode $MODENAME $MODEDATA
     xrandr --addmode $OUTPUT $MODENAME
     xrandr --output $OUTPUT --mode $MODENAME
-    xrandr --output eDP1 --off
+    xrandr --output eDP-1 --off
 else
     echo "Monitor is not detected"
 fi
