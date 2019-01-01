@@ -1,1 +1,1 @@
-i3-gaps lightdm lightdm-gtk-greeter lxterminal network-manager-applet networkmanager-openvpn networkmanager nitrogen brave arandr veracrypt gparted xcompmgr blueberry htop unzip zip xclip i3lock pavucontrol nmap virtualbox vlc redshift screen netcat
+i3-gaps lightdm lightdm-gtk-greeter lxterminal network-manager-applet networkmanager-openvpn networkmanager nitrogen brave arandr veracrypt gparted xcompmgr blueberry htop unzip zip xclip i3lock pavucontrol nmap virtualbox vlc redshift screen netcat bind-tools jre8-openjdk gimp
