@@ -24,6 +24,7 @@ alias btc="curl http://rate.sx/btc"
 alias py="./env/bin/python"
 alias activate="source ./env/bin/activate"
 alias dpg='python2 ~/archlinux-scripts/infosec-tools/dpg/python/dpg.py'
+alias adb='~/.android-sdk/platform-tools/adb'
     
 export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin:/home/lp1/.gopath/bin/"
 export GOPATH="/home/$USER/.gopath/"
