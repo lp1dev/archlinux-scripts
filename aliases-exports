@@ -1,5 +1,5 @@
 alias lp1="ssh lp1@lp1.eu -p 44"
-alias lp2="ssh lp1@2.lp1.eu -p 44"
+alias fenrir="ssh lp1@fenrir.agency -p 44"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -30,7 +30,7 @@ export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/b
 export GOPATH="/home/$USER/.gopath/"
 export ANDROID_HOME="/home/$USER/.android-sdk/"
 export PATH=$PATH:$ANDROID_HOME/build-tools/24.0.2
-export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 export PATH=$PATH:$HOME/Tools/bin
 export EDITOR=emacs
 
