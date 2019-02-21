@@ -1,5 +1,5 @@
-alias lp1="ssh lp1@lp1.eu -p 44"
-alias fenrir="ssh lp1@fenrir.agency -p 44"
+alias lp1="ssh lp1@51.75.122.226 -p 44"
+alias fenrir="ssh lp1@5.39.79.197 -p 44"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -11,13 +11,6 @@ alias qemu="qemu-launcher"
 alias xflux="xflux -l 53.349805 -g -6.26031"
 alias phttp='screen -dmS http python -m http.server'
 alias pf="git push --force-with lease"
-#alias docker_rmall="docker rm $(docker ps -a -q)"
-#alias docker_killall="docker stop $(docker ps -a -q)"
-alias gifcaca='mplayer -vo aa -monitorpixelaspect 0.5 -msglevel all=0 -fs -aspect 16:9 –mf fps=30:type=gif  -ao dsound-sub-fuzziness 1 -loop 100'
-alias lsd='gifcaca https://media.giphy.com/media/OhEWDytX1xcg8/200w_d.gif 2> /dev/null' 
-alias deploy='function _deploy(){ curl -X PUT "http://vm-crashtest.bepatient.mobi:8000/$1" };_deploy'
-alias delbranch='function _del(){ curl -X DELETE "http://vm-crashtest.bepatient.mobi:8000/$1" };_del'
-alias listbranch="curl 'http://vm-crashtest.bepatient.mobi:8000/'"
 alias e="emacs"
 alias i3-reload="i3-msg reload && i3-msg restart"
 alias btc="curl http://rate.sx/btc"
