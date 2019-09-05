@@ -92,3 +92,8 @@ PERL_MB_OPT="--install_base \"/home/lp1/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/lp1/perl5"; export PERL_MM_OPT;
 
 neofetch
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+source ~/.rvm/scripts/rvm
+source ~/.rvm/scripts/rvm
