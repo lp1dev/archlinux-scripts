@@ -3,7 +3,7 @@
 # setup my massive monitor at 45hz if its plugged in
 
 RESOLUTION="2560 1080 60" 
-OUTPUT="HDMI-1"
+OUTPUT="DP-2"
 
 CONNECTED=$(xrandr --current | grep -i $OUTPUT | cut -f2 -d' ')
 
