@@ -1,4 +1,4 @@
-alias lp1="ssh lp1@51.75.122.226 -p 44"
+\alias lp1="ssh lp1@51.75.122.226 -p 44"
 alias fenrir="ssh fenrir@5.39.79.197 -p 44"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -17,9 +17,11 @@ alias btc="curl http://rate.sx/btc"
 alias py="./env/bin/python"
 alias activate="source ./env/bin/activate"
 alias dpg='python2 ~/archlinux-scripts/infosec-tools/dpg/python/dpg.py'
-alias adb='~/.android-sdk/platform-tools/adb'
+#alias adb='~/.android-sdk/platform-tools/adb'
 alias monip='curl http://monip.org 2> /dev/null | grep -oP "\d+\.\d+\.\d+\.\d+"'
-    
+alias ft=sudo\ ~/Tools/fenrir-tools/run.sh
+alias john='snap run john-the-ripper'
+
 export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin:/home/lp1/.gopath/bin/"
 export GOPATH="/home/$USER/.gopath/"
 export ANDROID_HOME="/home/$USER/.android-sdk/"

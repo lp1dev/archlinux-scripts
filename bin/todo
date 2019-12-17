@@ -1,0 +1,97 @@
+#!/usr/bin/python
+
+from os import environ
+import  sys
+
+todofolder = environ["HOME"] + "/"
+debug = 1
+green = "\033[1;32m"
+white = "\033[0;m"
+red = "\033[1;31m"
+
+def             readh():
+    print("add     NAME\t: Add a new task"); 
+    print("rm      TASK_ID\t: Remove a task"); 
+    print("status  TASK_ID\t: Change the status of a task"); 
+
+def             show():
+    i = 0;
+    try:
+        with open(todofolder+".todolist", "r+"):
+            todolist = open(todofolder+".todolist", "r+")
+    except IOError as e:
+        print(e)
+        print("You actually have no todo file. Please execute this command : \ntouch "+todofolder+".todolist")
+        sys.exit(0);
+    todo = todolist.readlines();
+    while (i < len(todo)):
+        task = todo[i][:-1].split(';');
+        print("[Task "+str(i)+"] : "+task[0]);
+        if (task[1] == '0'):
+            print(red+"[Status] : To do\n"+white);
+        else:
+             print(green+"[Status] : Done\n"+white);
+        i = i + 1;
+    if (i == 0):
+        print("No tasks in this todolist .\nUse "+sys.argv[0]+" add to add one");
+    todolist.close();
+
+def             add(desc):
+    todolist = open(todofolder+".todolist", "a");
+    todolist.write(desc+";0\n");
+    todolist.close();
+
+def             rm(num):
+    todolist = open(todofolder+".todolist", "r+");
+    todo = todolist.readlines();
+    i = 0;
+    if (num < len(todo)):
+        todo.pop(num);
+    else:
+        print("This task doesn't exists");
+    todolist.close();
+    todolist = open(todofolder+".todolist", "w");
+    while (i < len(todo)):
+        todolist.write(todo[i]);
+        i = i + 1;
+    todolist.close();
+
+def             status(num):
+    todolist = open(todofolder+".todolist", "r+");
+    todo = todolist.readlines();
+    i = 0;
+    while (i < len(todo)):
+        task = todo[i][:-1].split(';');
+        if (i == num):
+            if (task[1] == "0"):
+                task[1] = "1";
+            else:
+                task[1] = "0";
+            todo[i] = task[0]+";"+task[1]+"\n";
+        i = i + 1;
+    todolist.close();
+    i = 0;
+    todolist = open(todofolder+".todolist", "w");
+    while (i < len(todo)):
+        todolist.write(todo[i]);
+        i = i + 1;
+    todolist.close();
+    
+def             main():
+    if (len(sys.argv) > 2):
+        if (sys.argv[1] == "status") and (int(sys.argv[2]) >= 0):
+            status(int(sys.argv[2]));
+        if (sys.argv[1] == "rm") and (int(sys.argv[2]) >= 0):
+            rm(int(sys.argv[2]));
+        if (sys.argv[1] == "add") and (sys.argv[2]):
+            add(sys.argv[2]);
+    if (len(sys.argv) == 2):
+        if (sys.argv[1] == "help"):
+            readh();
+        else:
+            print("Usage : "+sys.argv[0]+" add rm status help");
+    else:
+        show();
+
+main();
+
