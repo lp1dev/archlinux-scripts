@@ -1,4 +1,6 @@
-\alias lp1="ssh lp1@51.75.122.226 -p 44"
+# aliases
+
+alias lp1="ssh lp1@51.75.122.226 -p 44"
 alias fenrir="ssh fenrir@5.39.79.197 -p 44"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -21,6 +23,9 @@ alias dpg='python2 ~/archlinux-scripts/infosec-tools/dpg/python/dpg.py'
 alias monip='curl http://monip.org 2> /dev/null | grep -oP "\d+\.\d+\.\d+\.\d+"'
 alias ft=sudo\ ~/Tools/fenrir-tools/run.sh
 alias john='snap run john-the-ripper'
+function ipinfo() { curl -u "$IPINFO_TOKEN:" "ipinfo.io/$1"; }
+
+# ENV vars
 
 export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/$USER/archlinux-scripts/bin:/home/$USER/.jdk/bin:/home/lp1/.gopath/bin/"
 export GOPATH="/home/$USER/.gopath/"
@@ -33,3 +38,7 @@ export EDITOR=emacs
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#Loading credentials
+
+source $HOME/archlinux-scripts/credentials
