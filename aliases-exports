@@ -20,7 +20,7 @@ alias py="./env/bin/python"
 alias activate="source ./env/bin/activate"
 alias dpg='python2 ~/archlinux-scripts/infosec-tools/dpg/python/dpg.py'
 #alias adb='~/.android-sdk/platform-tools/adb'
-alias monip='curl http://monip.org 2> /dev/null | grep -oP "\d+\.\d+\.\d+\.\d+"'
+alias monip='curl http://monip.org 2> /dev/null | grep -oP "IP : \d+\.\d+\.\d+\.\d+"'
 alias ft=sudo\ ~/Tools/fenrir-tools/run.sh
 alias john='snap run john-the-ripper'
 function ipinfo() { curl -u "$IPINFO_TOKEN:" "ipinfo.io/$1"; }
@@ -36,6 +36,8 @@ export PATH=$PATH:$ANDROID_HOME/build-tools/24.0.2
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 export PATH=$PATH:$HOME/Tools/bin
 export EDITOR=emacs
+export HISTIGNORE="$HISTIGNORE:jrnl *"
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
