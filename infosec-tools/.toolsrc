@@ -1,3 +1,4 @@
+https://github.com/FenrirSec/fenrir-tools.git
 https://github.com/Hackplayers/4nonimizer.git
 https://github.com/styx00/Apache-Vulns.git
 https://github.com/michenriksen/aquatone.git
@@ -5,7 +6,6 @@ https://github.com/artemkin/cisco-password-decoder.git
 https://github.com/nccgroup/cisco-SNMP-enumeration.git
 https://github.com/Dionach/CMSmap.git
 https://github.com/haicen/DahuaHashCreator.git
-https://github.com/DarkSpiritz/DarkSpiritz.git
 https://github.com/UltimateHackers/Decodify.git
 https://github.com/miohtama/desfire.git
 https://github.com/Nekmo/dirhunt.git
@@ -25,13 +25,11 @@ https://github.com/mozilla/http-observatory
 https://github.com/entropy1337/infernal-twin.git
 https://github.com/AlessandroZ/LaZagne.git
 https://github.com/lesspass/lesspass.git
-https://github.com/joshavanier/log.git
 https://github.com/RobinDavid/LSB-Steganography.git
 https://github.com/CISOfy/lynis.git
 https://github.com/blechschmidt/massdns.git
 https://github.com/nfc-tools/mfcuk.git
 https://github.com/nfc-tools/mfoc.git
-https://github.com/WeebSec/PhishX.git
 https://github.com/ProtonVPN/protonvpn-cli.git
 https://github.com/lp1dev/proxy-grabber.git
 https://github.com/zerstoeren/rdp-scan.git
@@ -52,4 +50,6 @@ https://github.com/wpscanteam/wpscan.git
 https://github.com/wg/wrk.git
 https://github.com/Moham3dRiahi/XAttacker.git
 https://github.com/deviavir/zenbot.git
-https://github.com/UltimateHackers/Zoom.git
+https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
+https://github.com/codingo/Interlace.git
+https://github.com/ffuf/ffuf.git
