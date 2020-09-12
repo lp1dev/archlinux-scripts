@@ -24,7 +24,6 @@ alias monip='curl http://monip.org 2> /dev/null | grep -oP "IP : \d+\.\d+\.\d+\.
 alias ft=sudo\ ~/Tools/fenrir-tools/run.sh
 alias john='snap run john-the-ripper'
 function ipinfo() { curl -u "$IPINFO_TOKEN:" "ipinfo.io/$1"; }
-alias node='/usr/local/bin/node'
 alias python='python3'
 
 # ENV vars
